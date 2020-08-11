@@ -1,0 +1,23 @@
+name: Build Action Dist
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    name: Update Twitter Bio
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Setup Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12.x
+      - name: Install Dependencies
+        run: npm install
+      - name: Build
+        run: npm run build
+    - name: Update dist
+      uses: test-room-7/action-update-file@v1
+      with:
+        file-path: dist/index.js
+        commit-msg: ":construction_worker: Action dist update"
+        github-token: ${{ secrets.GITHUB_TOKEN }}

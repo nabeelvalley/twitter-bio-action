@@ -1,26 +1,27 @@
 {
-  "name": "twitter-bio-update",
-  "version": "1.0.0",
-  "description": "A GitHub action to update your twitter bio",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/nabeelvalley/twitter-bio-action.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/nabeelvalley/twitter-bio-action/issues"
-  },
-  "homepage": "https://github.com/nabeelvalley/twitter-bio-action#readme",
-  "dependencies": {
-    "@actions/core": "^1.2.4",
-    "dotenv": "^8.2.0",
-    "rollup": "^2.23.1",
-    "twitter": "^1.7.1"
-  }
+    "name": "twitter-bio-update",
+    "version": "1.0.0",
+    "description": "A GitHub action to update your twitter bio",
+    "main": "dist/index.js",
+    "scripts": {
+        "build": "parcel build index.js --target node --bundle-node-modules"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/nabeelvalley/twitter-bio-action.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/nabeelvalley/twitter-bio-action/issues"
+    },
+    "homepage": "https://github.com/nabeelvalley/twitter-bio-action#readme",
+    "dependencies": {
+        "@actions/core": "^1.2.4",
+        "dotenv": "^8.2.0",
+        "parcel": "^1.12.4",
+        "twitter": "^1.7.1"
+    },
+    "devDependencies": {}
 }
