@@ -1,5 +1,5 @@
 {
-  "name": "twitter-bio-action",
+  "name": "twitter-bio-update",
   "version": "1.0.0",
   "description": "A GitHub action to update your twitter bio",
   "main": "index.js",
