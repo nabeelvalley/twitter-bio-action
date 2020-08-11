@@ -10,4 +10,4 @@ inputs:
     default: "Hello, World!"
 runs:
   using: "node12"
-  main: "index.js"
+  main: "dist/index.js"
