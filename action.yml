@@ -1,5 +1,8 @@
 name: "Twitter Bio Update"
 description: "Update your Twitter Account Bio"
+branding:
+  icon: info
+  color: purple
 inputs:
   bio:
     description: "Text that you would like to set as your Twitter Bio"
