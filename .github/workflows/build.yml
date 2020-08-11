@@ -15,9 +15,9 @@ jobs:
         run: npm install
       - name: Build
         run: npm run build
-    - name: Update dist
-      uses: test-room-7/action-update-file@v1
-      with:
-        file-path: dist/index.js
-        commit-msg: ":construction_worker: Action dist update"
-        github-token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Update dist
+        uses: test-room-7/action-update-file@v1
+        with:
+          file-path: dist/index.js
+          commit-msg: ":construction_worker: Action dist update"
+          github-token: ${{ secrets.GITHUB_TOKEN }}
