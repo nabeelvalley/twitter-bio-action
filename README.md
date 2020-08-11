@@ -36,16 +36,8 @@ jobs:
     runs-on: ubuntu-latest
     name: Update Twitter Bio
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-      - name: Setup Node.js
-        uses: actions/setup-node@v1
-        with:
-          node-version: 12.x
-      - name: Install Dependencies
-        run: npm install
       - name: Run Action
-        uses: ./
+        uses: nabeelvalley/twitter-bio-update@v1.0.0
         env:
           TWITTER_CONSUMER_KEY: ${{ secrets.TWITTER_CONSUMER_KEY }}
           TWITTER_CONSUMER_SECRET: ${{ secrets.TWITTER_CONSUMER_SECRET }}
