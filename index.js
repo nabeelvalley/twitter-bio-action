@@ -1,7 +1,5 @@
 require('dotenv').config()
 
-console.log(process.env)
-
 const Twitter = require('twitter')
 const core = require('@actions/core')
 
