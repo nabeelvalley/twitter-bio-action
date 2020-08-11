@@ -1,0 +1,17 @@
+name: Run Twitter Bio Action
+on:
+  workflow_dispatch:
+    inputs:
+      bio:
+        description: "Twitter Bio"
+        required: true
+
+jobs:
+  update-bio:
+    runs-on: ubuntu-latest
+    name: Update Twitter Bio
+    steps:
+      - name: Run Action
+        uses: ./
+        with:
+          bio: ${{ env.bio }}
