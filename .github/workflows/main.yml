@@ -26,4 +26,4 @@ jobs:
           TWITTER_ACCESS_SECRET: ${{ secrets.TWITTER_ACCESS_SECRET }}
         uses: ./
         with:
-          bio: ${{ env.INPUT_BIO }}
+          bio: ${{ github.event.inputs.bio }}
