@@ -5,21 +5,21 @@ on:
       bio:
         description: "Twitter Bio"
         required: true
-        
+
 jobs:
   update-bio:
     runs-on: ubuntu-latest
     name: Update Twitter Bio
     steps:
       - name: Checkout
-        uses: actions/checkout@v2.3.2
+        uses: actions/checkout@v2
       - name: Setup Node.js
-        uses: actions/setup-node@v14.3
-        with: 
+        uses: actions/setup-node@12
+        with:
           node-version: 12.x
       - run: npm install
       - name: Run Action
-        env: 
+        env:
           TWITTER_CONSUMER_KEY: ${{ secrets.TWITTER_CONSUMER_KEY }}
           TWITTER_CONSUMER_SECRET: ${{ secrets.TWITTER_CONSUMER_SECRET }}
           TWITTER_ACCESS_KEY: ${{ secrets.TWITTER_ACCESS_KEY }}
